@@ -1,0 +1,25 @@
+
+li {
+    display: inline;
+    text-decoration: none;
+
+}
+
+li a { 
+font-family: "Comfortaa";
+text-decoration-line: none;
+color: #a2d86e !important;
+padding: 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.navigace{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+    line-break: 1px;
+}
