@@ -2,7 +2,14 @@
 li {
     display: inline;
     text-decoration: none;
+  
+}
 
+ @media screen and (max-width: 640px) {
+    li {
+        display: none;
+    }
+ 
 }
 
 li a { 
@@ -14,11 +21,13 @@ padding: 20px;
 
 .logo {
     height: 40px;
+    padding: 10px;
 }
 
 .navigace{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     width: 1000px;
     line-break: 1px;
