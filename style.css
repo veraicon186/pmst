@@ -69,6 +69,7 @@ padding: 20px;
 .hover-img {
   display: block;
   height: 35px; /* nastav podle potřeby */
+  margin: 0 10px;
 }
 
 .hover-alt {
@@ -103,6 +104,14 @@ a:hover .hover-alt {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 640px) {
+   .photos {
+        flex-direction: column;
+       align-items: center;
+    }
+ 
+}
+
 .arrows {
     width: 100px;
     margin: 40px auto;
@@ -112,3 +121,4 @@ a:hover .hover-alt {
     height: 40px;
     margin: 10px;
 }
+
