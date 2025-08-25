@@ -1,4 +1,9 @@
 
+body {
+      margin: 0 auto;
+    max-width: 1000px;
+}
+
 li {
     display: inline;
     text-decoration: none;
@@ -6,16 +11,45 @@ li {
 }
 
  @media screen and (max-width: 640px) {
-    li {
+    .navbar {
         display: none;
     }
  
 }
 
-li a { 
+.hamburger-menu {
+    height: 40px;
+}
+
+
+
+@media screen and (min-width: 640px) {
+   .hover-img {
+        display: none;
+    }
+ 
+}
+
+h1 {
+   font-family: "Comfortaa";
+   font-size: 20px; 
+   color: #585f69;
+   padding: 30px 10px;
+}
+
+p {
+    font-family: "Comfortaa";
+    color: #a2d86e;
+    font-weight: 800;
+    font-size: 13px;
+    text-align: center;
+}
+
+ li a { 
 font-family: "Comfortaa";
 text-decoration-line: none;
 color: #a2d86e !important;
+font-weight: 500;
 padding: 20px;
 }
 
@@ -28,7 +62,43 @@ padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    width: 1000px;
     line-break: 1px;
+}
+
+
+.hover-img {
+  display: block;
+  height: 35px; /* nastav podle potřeby */
+}
+
+.hover-alt {
+  display: none;
+}
+
+a:hover .hover-img {
+  display: none;
+}
+
+a:hover .hover-alt {
+  display: block;
+}
+
+.circle-photo { 
+    width: 250px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    margin: 30px 10px 0px 10px;
+}
+
+.circle-photo:hover {
+  transform: scale(1.1); /* zvětšení o 10 % */
+  box-shadow: 0 3px 15px rgba(0,0,0,0.4); /* jemný stín */
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
