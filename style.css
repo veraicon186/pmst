@@ -102,3 +102,13 @@ a:hover .hover-alt {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.arrows {
+    width: 100px;
+    margin: 40px auto;
+}
+
+.arrow {
+    height: 40px;
+    margin: 10px;
+}
