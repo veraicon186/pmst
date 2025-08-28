@@ -116,9 +116,10 @@ a:hover .hover-alt {
  
 }
 
-.arrows {
-    width: 100px;
+.icons {
+    width: 300px;
     margin: 40px auto;
+    display: flex;
 }
 
 .arrow {
