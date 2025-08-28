@@ -27,7 +27,9 @@ li {
    .hover-img {
         display: none;
     }
- 
+    .hamburger-menu {
+        display: none !important;
+     }
 }
 
 h1 {
@@ -48,7 +50,8 @@ p {
  li a { 
 font-family: "Comfortaa";
 text-decoration-line: none;
-color: #a2d86e !important;
+color: #585f69 !important;
+font-size: 14px;
 font-weight: 500;
 padding: 20px;
 }
