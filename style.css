@@ -113,6 +113,11 @@ a:hover .hover-alt {
     h1 {
         text-align: center;
     }
+
+    #myVideo1, #myVideo2 {
+        width: 300px;
+
+    }
  
 }
 
@@ -120,7 +125,7 @@ a:hover .hover-alt {
     width: 200px;
     display: flex;
     justify-content: space-between;
-   margin: 40px auto;
+    margin: 40px auto;
 }
 
 .arrow {
@@ -133,11 +138,11 @@ a:hover .hover-alt {
 }
 
 #myVideo1 {
-   width: 750px;
+   width: 75%;
     height: auto; 
 }
 
 #myVideo2 {
-    width: 500px;
+    width: 50%;
     height: auto; 
 }
