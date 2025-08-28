@@ -126,3 +126,16 @@ a:hover .hover-alt {
     margin: 10px;
 }
 
+.video {
+    text-align: center;
+}
+
+#myVideo1 {
+   width: 750px;
+    height: auto; 
+}
+
+#myVideo2 {
+    width: 500px;
+    height: auto; 
+}
