@@ -47,13 +47,17 @@ p {
     text-align: center;
 }
 
- li a { 
+ul.navbar li a { 
 font-family: "Comfortaa";
 text-decoration-line: none;
 color: #585f69 !important;
 font-size: 14px;
 font-weight: 500;
 padding: 20px;
+}
+
+ul.navbar li a:hover  {
+    color: #a2d86e !important;
 }
 
 .logo {
@@ -145,7 +149,3 @@ a:hover .hover-alt {
     height: auto; 
 }
 
-#myVideo2 {
-    width: 50%;
-    height: auto; 
-}
