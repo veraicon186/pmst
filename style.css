@@ -266,18 +266,7 @@ a:hover .hover-alt {
   position: relative;
   border-radius: 50%;
   
-  /* LUXUSNÍ VRSTVENÝ STÍN (BEZ ZELENÉ) */
-  box-shadow: 
-    /* 1. Tlustší čistě bílá linka (donut okraj) */
-    0 0 0 0.2px rgba(255, 255, 255, 1),
-    /* 2. Velmi jemná vnější linka (definuje hranu proti bílému webu) */
-    0 0 0 3px rgba(0, 0, 0, 0.03),
-    /* 3. Hlavní snový stín (levitace v prostoru) */
-    0 30px 60px rgba(0, 0, 0, 0.12),
-    /* 4. Druhý, užší stín pro pocit váhy */
-    0 15px 25px rgba(0, 0, 0, 0.1),
-    /* 5. Vnitřní donutový stín (vnoření fotky) */
-    inset 0 0 30px rgba(0, 0, 0, 0.08);
+ 
 }
 
 
@@ -404,4 +393,43 @@ a:hover .hover-alt {
 
 
 
+.model-coin {
+  width: 380px;
+  height: 380px;
+  margin: 40px 0 40px 110px;
+  position: relative;
+  border-radius: 50%;
 
+  filter: drop-shadow(0 60px 60px rgba(0,0,0,0.35));
+}
+
+
+.model-coin {
+  animation: floatCoin 6s ease-in-out infinite;
+}
+
+@keyframes floatCoin {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.model-coin::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 120px;
+  height: 120px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.1),
+    transparent
+  );
+
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 5;
+}
