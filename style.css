@@ -158,7 +158,10 @@ a:hover .hover-alt {
         align-items: center;
     }
 
-
+    .model-coin{
+        max-width: 300px;
+        margin: 30px auto;
+    }
  
 }
 
