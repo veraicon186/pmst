@@ -71,26 +71,8 @@ ul.navbar li a:hover {
   padding: 10px;
 }
 
-.hamburger-menu {
-  height: 40px;
-}
-
-.hover-img {
-  display: block;
-  height: 35px;
-  margin: 0 10px;
-}
-
-.hover-alt {
-  display: none;
-}
-
-a:hover .hover-img {
-  display: none;
-}
-
-a:hover .hover-alt {
-  display: block;
+.menu-icon {
+    display: none;
 }
 
 /* ---------- HERO ---------- */
@@ -368,9 +350,31 @@ align-items: flex-start;
     display: none;
   }
 
-  .hamburger-menu {
-    display: block;
-  }
+  .menu-icon {
+display: block;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-icon img {
+  height: 35px;
+  padding-right: 10px;
+}
+
+.menu-icon .hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.menu-icon:hover .normal {
+  opacity: 0;
+}
+
+.menu-icon:hover .hover {
+  opacity: 1;
+}
 
   .hero {
     flex-direction: column-reverse;
