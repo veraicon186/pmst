@@ -158,12 +158,10 @@ a:hover .hover-alt {
         align-items: center;
     }
 
-    .model-coin{
-        max-width: 300px;
-        margin: 30px auto;
-    }
+   
  
 }
+
 
 .icons {
     width: 200px;
@@ -284,6 +282,7 @@ a:hover .hover-alt {
 
 
 
+
 .coin-inner {
   position: absolute;
   top: 0; left: 0;
@@ -342,7 +341,14 @@ a:hover .hover-alt {
   filter: blur(10px);
 }
 
+@media screen and (max-width: 640px) {
 
+    .model-coin{
+        max-width: 300px;
+        margin: 0;
+    }
+ 
+}
 
 /* VRSTVA PRSTENCŮ */
 .puffy-rings {
