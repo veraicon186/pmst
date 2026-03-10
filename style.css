@@ -373,6 +373,7 @@ a:hover .hover-alt {
   .hero {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
   }
 
   .photos {
@@ -383,7 +384,7 @@ a:hover .hover-alt {
   .model-coin {
     width: 300px;
     height: 300px;
-    margin: 20px;
+    margin: 20px 0 100px;
   }
 
   h1 {
