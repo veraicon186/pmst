@@ -39,12 +39,34 @@ h1 {
    padding: 30px 10px;
 }
 
+.model-name{
+    padding: 30px 10px 10px 10px;
+}
+
+h2 {
+   font-family: "Comfortaa";
+   font-size: 15px; 
+   color: #585f69;
+   line-height: 1.5;
+   padding: 30px 10px;
+}
+
 p {
     font-family: "Comfortaa";
     color: #a2d86e;
     font-weight: 800;
     font-size: 13px;
     text-align: center;
+}
+
+.model-details {
+font-family: "Comfortaa";
+   font-size: 14px; 
+   line-height: 1.5;
+   color: #585f69;
+   text-align: left;
+   padding-left: 10px;
+
 }
 
 ul.navbar li a { 
@@ -91,18 +113,23 @@ a:hover .hover-alt {
   display: block;
 }
 
+.hero {
+    display: flex;
+    border-bottom: #d8dadd solid 1px;
+}
+
 .circle-photo { 
     width: 250px;
     border-radius: 50%; 
     object-fit: cover; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    margin: 30px 10px 0px 10px;
+    margin: 30px 10px 10px 10px;
 }
 
 .circle-photo:hover {
   transform: scale(1.1); /* zvětšení o 10 % */
-  box-shadow: 0 3px 15px rgba(0,0,0,0.4); /* jemný stín */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.7); /* jemný stín */
 }
 
 .photos {
@@ -148,4 +175,215 @@ a:hover .hover-alt {
    width: 75%;
     height: auto; 
 }
+
+/* 
+.model-coin {
+  width: 350px;
+  height: 350px;
+  perspective: 1200px; 
+  margin: 30px 0 30px 110px;
+}
+
+.coin-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.coin-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  opacity: 0; 
+  transition: opacity 0.1s;
+}
+
+.coin-side img {
+  width: 100%;         
+  height: 100%;         
+  object-fit: cover;    
+  display: block;
+}
+
+
+.coin-side.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.coin-side.next {
+  opacity: 1;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.animate-flip {
+  animation: flipStep 1s ease-in-out forwards;
+}
+
+@keyframes flipStep {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+
+.animate-flip .active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.6) 50%, transparent 70%);
+  transform: skewX(-25deg);
+  animation: quickShine 1.5s ease-in-out forwards;
+}
+
+@keyframes quickShine {
+  0% { left: -150%; }
+  50% { left: 150%; }
+  100% { left: 150%; }
+} 
+*/
+
+.model-coin {
+  width: 350px;
+  height: 350px;
+  margin: 40px 0 40px 110px;
+  position: relative;
+  border-radius: 50%;
+  
+  /* LUXUSNÍ VRSTVENÝ STÍN (BEZ ZELENÉ) */
+  box-shadow: 
+    /* 1. Tlustší čistě bílá linka (donut okraj) */
+    0 0 0 0.2px rgba(255, 255, 255, 1),
+    /* 2. Velmi jemná vnější linka (definuje hranu proti bílému webu) */
+    0 0 0 3px rgba(0, 0, 0, 0.03),
+    /* 3. Hlavní snový stín (levitace v prostoru) */
+    0 30px 60px rgba(0, 0, 0, 0.12),
+    /* 4. Druhý, užší stín pro pocit váhy */
+    0 15px 25px rgba(0, 0, 0, 0.1),
+    /* 5. Vnitřní donutový stín (vnoření fotky) */
+    inset 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.coin-inner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.coin-side {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 1;
+  /* ZDE: Stará fotka mizí pomaleji (2.5s) */
+  transition: opacity 2.5s ease-in-out; 
+}
+
+.coin-side.active {
+  opacity: 1;
+  z-index: 2;
+  /* ZDE: Nová fotka se objevuje standardně (1.2s) */
+  transition: opacity 1.2s ease-in-out;
+}
+
+.coin-side img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  /* VÝCHOZÍ STAV: Fotka je připravená v dálce (1) a rozmazaná */
+  transform: scale(1); 
+  filter: blur(10px);
+  /* Přechod zpět do dálky (při mizení) */
+  transition: transform 2.5s cubic-bezier(0.2, 0, 0.4, 1), 
+              filter 2.5s ease-in-out;
+}
+
+.coin-side.active img {
+  /* AKTIVNÍ STAV: Nafoukne se na 1.2 (Puffy efekt) */
+  transform: scale(1.2); 
+  filter: blur(0px);
+  /* Přechod k divákovi */
+  transition: transform 1.5s cubic-bezier(0.2, 0, 0.4, 1), 
+              filter 1.2s ease-in-out;
+}
+
+.coin-side:not(.active) img {
+  /* OKAMŽITÝ RESET: Když fotka ztratí třídu active, 
+     necháme ji v pozadí (opacity 0) vrátit na scale 1, 
+     ale s delayem, aby to divák neviděl dřív, než zmizí. */
+  transition: transform 0s 2.5s; 
+  transform: scale(1); 
+  filter: blur(10px);
+}
+
+
+
+/* VRSTVA PRSTENCŮ */
+.puffy-rings {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  opacity: 0;
+  
+  /* EFEKT LOGA: Tlustá "trubka" s rozostřením */
+  border: 25px solid rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(8px); /* Rozostření fotky pod vlnou */
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* Stínování pro 3D objem (Puffy effect) */
+  box-shadow: 
+    inset 0 12px 18px rgba(255,255,255,0.7), /* Horní odlesk */
+    inset 0 -12px 18px rgba(0,0,0,0.15),      /* Spodní stín trubky */
+    0 10px 20px rgba(0,0,0,0.2);             /* Vnější stín na fotku */
+}
+
+/* Spuštění animace přes JS třídu */
+.animate-puffy .ring { animation: puffyWave 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.animate-puffy .r1 { animation-delay: 0s; }
+.animate-puffy .r2 { animation-delay: 0.2s; }
+.animate-puffy .r3 { animation-delay: 0.4s; }
+
+@keyframes puffyWave {
+  0% { 
+    width: 0%; height: 0%; 
+    opacity: 0; 
+    transform: translate(-50%, -50%) scale(0); 
+    border-width: 30px; /* Začíná jako tlustý bod */
+  }
+  30% { opacity: 1; }
+  100% { 
+    width: 100%; height: 100%; 
+    opacity: 0; 
+    transform: translate(-50%, -50%) scale(1.2); 
+    border-width: 5px; /* Na konci se ztenčí */
+  }
+}
+
+
+
 

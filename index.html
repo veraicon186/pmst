@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-
+<link rel="icon" type="image/png" href="favicon/favicon.png">
 
 	<link rel="stylesheet" href="style.css">
     
@@ -81,7 +81,35 @@
                
 </div>
 
+<section class="hero">
+	<div class="model-text">
+	<h1 class="model-name">Beegee Margenyte</h1>
+	<p class="model-details">Height: 177 cm<br>Bust: 85 cm<br>Waist: 61 cm<br>Hips: 89 cm<br>Shoes: 40<br>Hair: blond<br>Eyes: blue</p>
+	</div>
+<div class="model-coin" id="coin-container">
+  <div class="coin-inner" id="photo-layer">
+    <div class="coin-side active"><img src="model1.jpg" alt="1"></div>
+    <div class="coin-side"><img src="model2.jpg" alt="2"></div>
+    <div class="coin-side"><img src="model3.jpg" alt="3"></div>
+  </div>
+  
+  <!-- Vrstva pro "nafouknuté" skleněné prstence -->
+  <div class="puffy-rings" id="ripple-layer">
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="ring r3"></div>
+  </div>
 
+<div class="puffy-orbit"></div>
+</div>
+
+
+
+
+
+
+
+</section>
 
 
 <section class="gallery">
@@ -175,5 +203,72 @@
             </video>
 </section>
 
+<!-- <script>
+const inner = document.getElementById('coin-inner');
+const sides = document.querySelectorAll('.coin-side');
+let currentIndex = 0;
 
+function rotateModel() {
+  const current = sides[currentIndex];
+  currentIndex = (currentIndex + 1) % sides.length;
+  const next = sides[currentIndex];
+
+  // Příprava další fotky "do pozadí"
+  sides.forEach(s => s.classList.remove('next'));
+  next.classList.add('next');
+
+  // Spuštění animace
+  inner.classList.add('animate-flip');
+
+  // Po skončení animace (1.5s) prohodíme třídy a resetujeme rotaci
+  setTimeout(() => {
+    inner.classList.remove('animate-flip');
+    current.classList.remove('active');
+    next.classList.remove('next');
+    next.classList.add('active');
+  }, 1500);
+}
+
+// Opakovat každých 5 vteřin
+setInterval(rotateModel, 5000);
+
+</script> -->
+
+<svg style="display: none;">
+  <filter id="ripple-filter">
+    <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" id="displacement" />
+  </filter>
+</svg>
+
+
+<script>
+const rippleLayer = document.getElementById('ripple-layer');
+const sides = document.querySelectorAll('.coin-side');
+let currentIndex = 0;
+
+function rotateModel() {
+  const current = sides[currentIndex];
+  currentIndex = (currentIndex + 1) % sides.length;
+  const next = sides[currentIndex];
+
+  // Reset a spuštění animace prstenců
+  rippleLayer.classList.remove('animate-puffy');
+  void rippleLayer.offsetWidth; // Force reflow
+  rippleLayer.classList.add('animate-puffy');
+
+  // Výměna fotky nastane, když je vlna v největším rozkvětu
+  setTimeout(() => {
+    current.classList.remove('active');
+    next.classList.add('active');
+  }, 800); // Polovina animace prstenců
+}
+
+setInterval(rotateModel, 5000);
+
+
+
+
+
+</script>
 </body>
