@@ -330,16 +330,7 @@ a:hover .hover-alt {
   filter: blur(10px);
 }
 
-@media screen and (max-width: 640px) {
 
-    .model-coin{
-        max-width: 300px;
-        max-height: 300px;
-        margin: 20px;
-    }
- 
-
-}
 
 /* VRSTVA PRSTENCŮ */
 .puffy-rings {
@@ -432,4 +423,15 @@ a:hover .hover-alt {
   filter: blur(20px);
   pointer-events: none;
   z-index: 5;
+}
+
+@media screen and (max-width: 640px) {
+
+    .model-coin{
+        max-width: 300px;
+        max-height: 300px;
+        margin: 20px;
+    }
+ 
+
 }
