@@ -345,9 +345,11 @@ a:hover .hover-alt {
 
     .model-coin{
         max-width: 300px;
-        margin: 0;
+        max-height: 300px;
+        margin: 20px;
     }
  
+
 }
 
 /* VRSTVA PRSTENCŮ */
