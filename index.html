@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
 
 <link rel="stylesheet" href="style.css">
     
@@ -262,9 +262,9 @@ function rotateModel() {
   setTimeout(() => {
     current.classList.remove('active');
     next.classList.add('active');
-  }, 800); // Polovina animace prstenců
+  }, 500); // Polovina animace prstenců
 }
-
+rotateModel();
 setInterval(rotateModel, 5000);
 
 
