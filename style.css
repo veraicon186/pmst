@@ -281,7 +281,7 @@ align-items: flex-start;
     height: 0%;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
-    border-width: 30px;
+    border-width: 15px;
   }
 
   30% { opacity: 1; }
