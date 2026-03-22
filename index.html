@@ -1,190 +1,113 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>pmst</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMST</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-
-<link rel="icon" href="/favicon.png">
-<link rel="shortcut icon" href="/favicon.ico">
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="site-header">
+<div class="nav">
+    <img class="nav__logo" src="logo.png" alt="Logo">
+    <a href="#" class="nav__toggle">
+        <img class="nav__icon nav__icon--base" src="hamburger_menu.png" alt="Menu">
+        <img class="nav__icon nav__icon--hover" src="cross.png" alt="Close">
+    </a>
 
-<img class="site-logo" src="logo.png">
-
-<a href="#" class="nav-toggle">
-<img class="nav-toggle-icon default" src="hamburger_menu.png">
-<img class="nav-toggle-icon hover" src="cross.png">
-</a>
-
-<ul class="main-nav">
-
-<li class="is-active"><a href="/default/women">WOMEN</a></li>
-<li><a href="/default/wawa">WAWA</a></li>
-<li><a href="/default/men">MEN</a></li>
-<li><a href="#about-us">ABOUT US</a></li>
-<li><a href="/default/join-us">JOIN US</a></li>
-<li><a href="/default/contact">CONTACT US</a></li>
-
-</ul>
-
-</header>
-
+    <ul class="nav__list">
+        <li class="nav__item nav__item--active"><a href="/default/women">WOMEN</a></li>
+        <li class="nav__item"><a href="/default/wawa">WAWA</a></li>
+        <li class="nav__item"><a href="/default/men">MEN</a></li>
+        <li class="nav__item"><a href="#about-us">ABOUT US</a></li>
+        <li class="nav__item"><a href="/default/join-us">JOIN US</a></li>
+        <li class="nav__item"><a href="/default/contact">CONTACT US</a></li>
+    </ul>
+</div>
 
 <section class="hero">
+    <div class="hero__content">
+        <h1 class="hero__title">Beegee Margenyte</h1>
+        <p class="hero__stats">Height: 177 cm<br>Bust: 85 cm<br>Waist: 61 cm<br>Hips: 89 cm<br>Shoes: 40<br>Hair: blond<br>Eyes: blue</p>
+    </div>
+    <div class="hero__portraits" id="portrait-container">
+        <div class="hero__portraits-inner">
+            <div class="hero__portrait hero__portrait--active"><img src="model1.jpg" alt="Model 1"></div>
+            <div class="hero__portrait"><img src="model2.jpg" alt="Model 2"></div>
+            <div class="hero__portrait"><img src="model3.jpg" alt="Model 3"></div>
+        </div>
+        
+        <div class="hero__ripples" id="ripple-layer">
+            <div class="hero__ripple-item"></div>
+        </div>
 
-<div class="model-profile">
-
-<h1 class="model-profile__name">Beegee Margenyte</h1>
-
-<p class="model-profile__stats">
-Height: 177 cm<br>
-Bust: 85 cm<br>
-Waist: 61 cm<br>
-Hips: 89 cm<br>
-Shoes: 40<br>
-Hair: blond<br>
-Eyes: blue
-</p>
-
-</div>
-
-
-<div class="model-portrait" id="model-portrait">
-
-<div class="model-portrait__photos">
-
-<div class="model-portrait__photo is-active">
-<img src="model1.jpg" alt="">
-</div>
-
-<div class="model-portrait__photo">
-<img src="model2.jpg" alt="">
-</div>
-
-<div class="model-portrait__photo">
-<img src="model3.jpg" alt="">
-</div>
-
-</div>
-
-
-<div class="portrait-ripple" id="ripple-layer">
-<div class="portrait-ripple__ring"></div>
-</div>
-
-</div>
-
+        <div class="hero__orbit"></div>
+    </div>
 </section>
 
+<section class="gallery">
+    <h1 class="gallery__title">WOMEN</h1>
+    <div class="gallery__grid">
+        <div class="gallery__item">
+            <img class="gallery__image" src="foto1.jpg" alt="Agnes">
+            <p class="gallery__caption">Agnes</p>
+        </div>
+        <div class="gallery__item">
+            <img class="gallery__image" src="foto2.jpg" alt="Beegee">
+            <p class="gallery__caption">Beegee</p>
+        </div>
+        <div class="gallery__item">
+            <img class="gallery__image" src="foto3.jpg" alt="Deimante">
+            <p class="gallery__caption">Deimante</p>
+        </div>
+        <!-- Další položky dle potřeby -->
+    </div>
 
-
-<section class="model-grid">
-
-<h1>WOMEN</h1>
-
-<div class="model-grid__list">
-
-<div class="model-grid__item">
-<img class="model-grid__image" src="foto1.jpg">
-<p>Agnes</p>
-</div>
-
-<div class="model-grid__item">
-<img class="model-grid__image" src="foto2.jpg">
-<p>Beegee</p>
-</div>
-
-<div class="model-grid__item">
-<img class="model-grid__image" src="foto3.jpg">
-<p>Deimante</p>
-</div>
-
-</div>
-
-
-<div class="gallery-controls">
-
-<a href="#">
-<img class="control-icon" src="left.png">
-<img class="control-icon control-icon--hover" src="left_hover.png">
-</a>
-
-<a href="#">
-<img class="control-icon" src="hamburger_menu.png">
-<img class="control-icon control-icon--hover" src="hamburger_menu_hover.png">
-</a>
-
-<a href="#">
-<img class="control-icon" src="cross.png">
-<img class="control-icon control-icon--hover" src="cross_hover.png">
-</a>
-
-<a href="#">
-<img class="control-icon" src="right.png">
-<img class="control-icon control-icon--hover" src="right_hover.png">
-</a>
-
-</div>
-
+    <div class="preview-icons">
+        <a href="#" class="preview-icons__link">
+            <img class="preview-icons__img" src="left.png" alt="Prev">
+            <img class="preview-icons__img preview-icons__img--alt" src="left_hover.png" alt="Prev Hover">
+        </a>
+        <a href="#" class="preview-icons__link">
+            <img class="preview-icons__img" src="hamburger_menu.png" alt="Menu">
+            <img class="preview-icons__img preview-icons__img--alt" src="hamburger_menu_hover.png" alt="Menu Hover">
+        </a>
+        <a href="#" class="preview-icons__link">
+            <img class="preview-icons__img" src="right.png" alt="Next">
+            <img class="preview-icons__img preview-icons__img--alt" src="right_hover.png" alt="Next Hover">
+        </a>
+    </div>
 </section>
-
-
 
 <section class="video-section">
-
-<video class="video-player" muted playsinline autoplay loop preload="auto">
-<source src="swipe_1.mp4" type="video/mp4">
-</video>
-
+     <video class="video-section__player" muted playsinline autoplay loop preload="auto">
+        <source src="swipe_1.mp4" type="video/mp4">
+    </video>
 </section>
 
-
-
 <script>
-
 const rippleLayer = document.getElementById('ripple-layer');
-const slides = document.querySelectorAll('.model-portrait__photo');
-
+const portraits = document.querySelectorAll('.hero__portrait');
 let currentIndex = 0;
 
 function rotateModel() {
+  const current = portraits[currentIndex];
+  currentIndex = (currentIndex + 1) % portraits.length;
+  const next = portraits[currentIndex];
 
-const current = slides[currentIndex];
+  rippleLayer.classList.remove('hero__ripples--animate');
+  void rippleLayer.offsetWidth; 
+  rippleLayer.classList.add('hero__ripples--animate');
 
-currentIndex = (currentIndex + 1) % slides.length;
-
-const next = slides[currentIndex];
-
-rippleLayer.classList.remove('is-animating');
-void rippleLayer.offsetWidth;
-rippleLayer.classList.add('is-animating');
-
-setTimeout(() => {
-
-current.classList.remove('is-active');
-next.classList.add('is-active');
-
-}, 500);
-
+  setTimeout(() => {
+    current.classList.remove('hero__portrait--active');
+    next.classList.add('hero__portrait--active');
+  }, 500);
 }
-
-rotateModel();
 setInterval(rotateModel, 5000);
-
 </script>
-
 </body>
 </html>
