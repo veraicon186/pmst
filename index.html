@@ -1,275 +1,190 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>pmst</title>
 
-	
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pmst</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
 <link rel="icon" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
 
 <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
 
-<div class="navigace">
-    <img class="logo" src="logo.png">
-	<a href="#" class="menu-icon">
-  <img class="hamburger-menu normal" src="hamburger_menu.png">
-  <img class="hamburger-menu hover" src="cross.png">
+<header class="site-header">
+
+<img class="site-logo" src="logo.png">
+
+<a href="#" class="nav-toggle">
+<img class="nav-toggle-icon default" src="hamburger_menu.png">
+<img class="nav-toggle-icon hover" src="cross.png">
 </a>
 
-	
-                    <ul class="navbar">
-                        <!-- Home -->
-                        <li class="active">
-                            <a href="/default/women">
-                                WOMEN
-                            </a>
-                        </li>
-                        <!-- End Home -->
+<ul class="main-nav">
 
-                        <!-- Pages -->                        
-                        <li class="">
-                            <a href="/default/wawa">
-                                WAWA
-                            </a>
-                        </li>
-                        <!-- End Pages -->
+<li class="is-active"><a href="/default/women">WOMEN</a></li>
+<li><a href="/default/wawa">WAWA</a></li>
+<li><a href="/default/men">MEN</a></li>
+<li><a href="#about-us">ABOUT US</a></li>
+<li><a href="/default/join-us">JOIN US</a></li>
+<li><a href="/default/contact">CONTACT US</a></li>
 
-                        <!-- Pages -->
-                        <li class="">
-                            <a href="/default/men">
-                                MEN
-                            </a>
-                        </li>
-                        <!-- End Pages -->
+</ul>
 
-                        <!-- Blog -->
-                        <!-- End Blog -->
+</header>
 
-                        <!-- Contacts -->
-                        <li class="">
-                            <a href="#about-us">
-                                ABOUT US
-                            </a>
-                        </li>                    
-                        <!-- End Contacts -->
-
-                        <!-- Contacts -->
-                        <li class="">
-                            <a href="/default/join-us">
-                                JOIN US
-                            </a>
-                        </li>                    
-                        <!-- End Contacts -->
-
-                        <!-- Contacts -->
-                        <li class="">
-                            <a href="/default/contact">
-                                CONTACT US
-                            </a>
-                        </li>                    
-                        <!-- End Contacts -->
-
-                    </ul>
-               
-</div>
 
 <section class="hero">
-	<div class="model-text">
-	<h1 class="model-name">Beegee Margenyte</h1>
-	<p class="model-details">Height: 177 cm<br>Bust: 85 cm<br>Waist: 61 cm<br>Hips: 89 cm<br>Shoes: 40<br>Hair: blond<br>Eyes: blue</p>
-	</div>
-<div class="model-coin" id="coin-container">
-  <div class="coin-inner" id="photo-layer">
-    <div class="coin-side active"><img src="model1.jpg" alt="1"></div>
-    <div class="coin-side"><img src="model2.jpg" alt="2"></div>
-    <div class="coin-side"><img src="model3.jpg" alt="3"></div>
-  </div>
-  
-  <!-- Vrstva pro "nafouknuté" skleněné prstence -->
-  <div class="puffy-rings" id="ripple-layer">
-    <div class="ring r1"></div>
-   <!--   <div class="ring r2"></div>
-    <div class="ring r3"></div> -->
-  </div>
 
-<div class="puffy-orbit"></div>
+<div class="model-profile">
+
+<h1 class="model-profile__name">Beegee Margenyte</h1>
+
+<p class="model-profile__stats">
+Height: 177 cm<br>
+Bust: 85 cm<br>
+Waist: 61 cm<br>
+Hips: 89 cm<br>
+Shoes: 40<br>
+Hair: blond<br>
+Eyes: blue
+</p>
+
 </div>
 
 
+<div class="model-portrait" id="model-portrait">
+
+<div class="model-portrait__photos">
+
+<div class="model-portrait__photo is-active">
+<img src="model1.jpg" alt="">
+</div>
+
+<div class="model-portrait__photo">
+<img src="model2.jpg" alt="">
+</div>
+
+<div class="model-portrait__photo">
+<img src="model3.jpg" alt="">
+</div>
+
+</div>
 
 
+<div class="portrait-ripple" id="ripple-layer">
+<div class="portrait-ripple__ring"></div>
+</div>
 
-
+</div>
 
 </section>
 
 
-<section class="gallery">
-	<h1>WOMEN</h1>
-<div class="photos">
-	<div>
-		<img class="circle-photo" src="foto1.jpg">
-		<p>Agnes</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto2.jpg">
-		<p>Beegee</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto3.jpg">
-		<p>Deimante</p>
-	</div>
 
-		<div>
-		<img class="circle-photo" src="foto1.jpg">
-		<p>Agnes</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto2.jpg">
-		<p>Beegee</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto3.jpg">
-		<p>Deimante</p>
-	</div>
+<section class="model-grid">
 
-		<div>
-		<img class="circle-photo" src="foto1.jpg">
-		<p>Agnes</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto2.jpg">
-		<p>Beegee</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto3.jpg">
-		<p>Deimante</p>
-	</div>
+<h1>WOMEN</h1>
 
-		<div>
-		<img class="circle-photo" src="foto1.jpg">
-		<p>Agnes</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto2.jpg">
-		<p>Beegee</p>
-	</div>
-	<div>
-		<img class="circle-photo" src="foto3.jpg">
-		<p>Deimante</p>
-	</div>
+<div class="model-grid__list">
+
+<div class="model-grid__item">
+<img class="model-grid__image" src="foto1.jpg">
+<p>Agnes</p>
+</div>
+
+<div class="model-grid__item">
+<img class="model-grid__image" src="foto2.jpg">
+<p>Beegee</p>
+</div>
+
+<div class="model-grid__item">
+<img class="model-grid__image" src="foto3.jpg">
+<p>Deimante</p>
+</div>
+
 </div>
 
 
-
-<div class="icons">
-	<a href="#">
-	<img class="hover-img" src="left.png">
-	<img class="hover-img hover-alt" src="left_hover.png">
-	</a>
+<div class="gallery-controls">
 
 <a href="#">
-	<img class="hover-img" src="hamburger_menu.png">
-	<img class="hover-img hover-alt" src="hamburger_menu_hover.png">
-	</a>
+<img class="control-icon" src="left.png">
+<img class="control-icon control-icon--hover" src="left_hover.png">
+</a>
 
-	<a href="#">
-	<img class="hover-img" src="cross.png">
-	<img class="hover-img hover-alt" src="cross_hover.png">
-	</a>
+<a href="#">
+<img class="control-icon" src="hamburger_menu.png">
+<img class="control-icon control-icon--hover" src="hamburger_menu_hover.png">
+</a>
 
+<a href="#">
+<img class="control-icon" src="cross.png">
+<img class="control-icon control-icon--hover" src="cross_hover.png">
+</a>
 
-	<a href="#">
-	<img class="hover-img" src="right.png">
-  	<img class="hover-img hover-alt" src="right_hover.png">
-	</a>
+<a href="#">
+<img class="control-icon" src="right.png">
+<img class="control-icon control-icon--hover" src="right_hover.png">
+</a>
 
-	
 </div>
 
 </section>
 
-<section class="video">
-	 <video id="myVideo1" class="video" muted playsinline autoplay loop preload="auto">
-                <source src="swipe_1.mp4" type="video/mp4">
-            </video>
+
+
+<section class="video-section">
+
+<video class="video-player" muted playsinline autoplay loop preload="auto">
+<source src="swipe_1.mp4" type="video/mp4">
+</video>
+
 </section>
 
-<!-- <script>
-const inner = document.getElementById('coin-inner');
-const sides = document.querySelectorAll('.coin-side');
-let currentIndex = 0;
-
-function rotateModel() {
-  const current = sides[currentIndex];
-  currentIndex = (currentIndex + 1) % sides.length;
-  const next = sides[currentIndex];
-
-  // Příprava další fotky "do pozadí"
-  sides.forEach(s => s.classList.remove('next'));
-  next.classList.add('next');
-
-  // Spuštění animace
-  inner.classList.add('animate-flip');
-
-  // Po skončení animace (1.5s) prohodíme třídy a resetujeme rotaci
-  setTimeout(() => {
-    inner.classList.remove('animate-flip');
-    current.classList.remove('active');
-    next.classList.remove('next');
-    next.classList.add('active');
-  }, 1500);
-}
-
-// Opakovat každých 5 vteřin
-setInterval(rotateModel, 5000);
-
-</script> -->
-
-<svg style="display: none;">
-  <filter id="ripple-filter">
-    <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
-    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" id="displacement" />
-  </filter>
-</svg>
 
 
 <script>
+
 const rippleLayer = document.getElementById('ripple-layer');
-const sides = document.querySelectorAll('.coin-side');
+const slides = document.querySelectorAll('.model-portrait__photo');
+
 let currentIndex = 0;
 
 function rotateModel() {
-  const current = sides[currentIndex];
-  currentIndex = (currentIndex + 1) % sides.length;
-  const next = sides[currentIndex];
 
-  // Reset a spuštění animace prstenců
-  rippleLayer.classList.remove('animate-puffy');
-  void rippleLayer.offsetWidth; // Force reflow
-  rippleLayer.classList.add('animate-puffy');
+const current = slides[currentIndex];
 
-  // Výměna fotky nastane, když je vlna v největším rozkvětu
-  setTimeout(() => {
-    current.classList.remove('active');
-    next.classList.add('active');
-  }, 500); // Polovina animace prstenců
+currentIndex = (currentIndex + 1) % slides.length;
+
+const next = slides[currentIndex];
+
+rippleLayer.classList.remove('is-animating');
+void rippleLayer.offsetWidth;
+rippleLayer.classList.add('is-animating');
+
+setTimeout(() => {
+
+current.classList.remove('is-active');
+next.classList.add('is-active');
+
+}, 500);
+
 }
+
 rotateModel();
 setInterval(rotateModel, 5000);
 
-
-
-
-
 </script>
+
 </body>
+</html>
