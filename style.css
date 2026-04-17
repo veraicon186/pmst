@@ -168,12 +168,7 @@ align-items: flex-start;
   width: 120px;
   height: 120px;
 
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,0.6),
-    rgba(255,255,255,0.1),
-    transparent
-  );
+  
 
   filter: blur(20px);
   pointer-events: none;
